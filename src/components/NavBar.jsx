@@ -30,7 +30,7 @@ function NavBar() {
         </ul>
         <form method="POST" id="FormSearch">
           <input placeholder='Search' className={`SearchInput ${ show ? '': 'Fade' }`} />
-          <button type="submit" className={`SearchBtn ${ show ? '': 'Fade' }`}>Search</button>
+
         </form>
       </nav>
   );

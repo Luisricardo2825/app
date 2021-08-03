@@ -1,7 +1,8 @@
 import './styles/global.css'
 import React from 'react';
-import ReactDOM from 'react-dom';
 import NavBar from './components/NavBar.jsx'
+import Footer from './components/Footer.jsx'
+
 function App() {
   return (
     <div className="App">
@@ -11,9 +12,7 @@ function App() {
         <h1>Texto 1</h1>
         <h1>Texto</h1>
       </div>
-      <div className="downDiv">
-        bottom
-      </div>
+      <Footer />
     </div >
   );
 }
