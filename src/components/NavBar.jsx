@@ -21,18 +21,18 @@ function NavBar() {
     }
   }, [])
   return (
-    <header className={`Nav${ show ? 'Fade': 'TopFix' }`}>
-        <img className="logo" src="https://www.carmehil.com.br/wp-content/themes/carmehil/images/logo-grupo.png" alt="logo" />
-        <ul className="nav_links">
-          <li><a href="/">Services</a></li>
-          <li><a href="/">Projects</a></li>
-          <li><a href="/">About</a></li>
+    <nav className={`Nav${ show ? 'Fade': 'TopFix' }`}>
+        <img className={`logo ${ show ? '': 'Fade' }`} src="https://www.carmehil.com.br/wp-content/themes/carmehil/images/logo-grupo.png" alt="logo" />
+        <ul className={`nav_links ${ show ? 'Fade': '' }`}>
+          <li><a href="/" className={`link ${ show ? '': 'Fade' }`}>Services</a></li>
+          <li><a href="/" className={`link ${ show ? '': 'Fade' }`}>Projects</a></li>
+          <li><a href="/" className={`link ${ show ? '': 'Fade' }`}>About</a></li>
         </ul>
         <form method="POST" id="FormSearch">
-          <input placeholder='Search' className="SearchInput" />
-          <button type="submit">Search</button>
+          <input placeholder='Search' className={`SearchInput ${ show ? '': 'Fade' }`} />
+          <button type="submit" className={`SearchBtn ${ show ? '': 'Fade' }`}>Search</button>
         </form>
-      </header>
+      </nav>
   );
 }
 

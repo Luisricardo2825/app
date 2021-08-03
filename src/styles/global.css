@@ -18,6 +18,7 @@ a {
     font-size: 16px;
     color: #edf0f1;
     text-decoration: none;
+    visibility: visible;
 }
 
 input {
@@ -28,10 +29,19 @@ input {
     color: #0088a9;
     text-decoration: none;
     border-radius: 50px;
+    display: unset;
 }
 
 .HeaderImg {
     margin-top: 6rem;
+}
+.Fade {
+    color: transparent;
+    visibility: hidden;
+    opacity: 1;
+    transition: opacity
+        0.01s
+        ease-in;
 }
 .NavFade {
     margin-top: 0;
@@ -56,20 +66,21 @@ input {
     display: flex;
     justify-content: unset;
     align-items: center;
-    min-height: 0rem;
-    height: 0;
+    min-height: 8rem;
     padding: 10px
         10%;
-    transition-timing-function: ease-in;
-    transition: 0.2s;
-    max-height: 6rem;
+    position: fixed;
     background-color: var(
         --var-bgcolor-24252a
     );
-
-    position: fixed;
+    transition-timing-function: ease-in;
+    transition: 0.2s;
+    max-height: 6rem;
     width: 100%;
     top: 0px;
+    background-color: transparent;
+    color: transparent;
+    visibility: hidden;
 }
 .logo {
     cursor: pointer;
@@ -89,8 +100,8 @@ input {
     li
     a {
     transition: all
-        0.3s
-        ease
+        0.2s
+        ease-in
         0s;
 }
 .nav_links
@@ -162,10 +173,6 @@ button {
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    transition: all
-        0.3s
-        ease
-        0s;
 }
 
 button:hover {
